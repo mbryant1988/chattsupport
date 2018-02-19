@@ -1,0 +1,6 @@
+= simple_form_for(@business, html: {class: 'form-horizontal'}) do |f|
+  =f.input :company, label: "Company Name"
+  =f.input :description, label: "Company Description"
+  =f.input :url, label: 'Website'
+  %br/
+  =f.button  :submit

@@ -1,0 +1,9 @@
+%h1= @business.company
+%p= @business.description
+%p= @business.url
+
+= link_to "Home", root_path
+|
+= link_to "Edit", edit_business_path(@business)
+|
+= link_to "Delete", business_path(@business), method: :delete, data: { confirm: "are you sure?"}
