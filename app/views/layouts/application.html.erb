@@ -10,7 +10,9 @@
 
   <body>
     <div class="col-md-12">
-
+    <% Category.all.each do |category| %>
+    <%= link_to category.name, businesses_path(category: category.name) %>
+    <% end %>
     <%= yield %>
 
   </div>
