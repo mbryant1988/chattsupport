@@ -9,7 +9,7 @@
   </head>
 
   <body>
-    <div class="col-md-12">
+
       <nav class="navbar navbar-default">
         <div class="container-fluid">
           <%= link_to "All Businesses", root_path, :class => 'navbar-brand' %>
@@ -21,6 +21,7 @@
             <%= link_to 'Create New Business', new_business_path, :class => 'navbar-text navbar-right navbar-link' %>
         </div>
       </nav>
+      <div class="col-md-12">
     <%= yield %>
 
   </div>
