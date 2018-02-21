@@ -10,9 +10,17 @@
 
   <body>
     <div class="col-md-12">
-    <% Category.all.each do |category| %>
-    <%= link_to category.name, businesses_path(category: category.name) %>
-    <% end %>
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <%= link_to "All Businesses", root_path, :class => 'navbar-brand' %>
+            <ul class='nav navbar-nav'>
+              <% Category.all.each do |category| %>
+              <li><%= link_to category.name, businesses_path(category: category.name) %></li>
+              <% end %>
+            </ul>
+            <%= link_to 'Create New Business', new_business_path, :class => 'navbar-text navbar-right navbar-link' %>
+        </div>
+      </nav>
     <%= yield %>
 
   </div>
